@@ -1,0 +1,323 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86950687-6939-4BE4-AB9D-1A15AE72C14F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>online_vote</RootNamespace>
+    <AssemblyName>online vote</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44309</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.3, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.3\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="addCandidates.aspx" />
+    <Content Include="addElections.aspx" />
+    <Content Include="admin.aspx" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
+    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\RazorEngine.dll" />
+    <Content Include="bin\RazorEngine.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\material-cards.css" />
+    <Content Include="Content\Voting_system_sql.sql" />
+    <Content Include="Default.aspx" />
+    <Content Include="editElections.aspx" />
+    <Content Include="Elections.aspx" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\abhinav.jpg" />
+    <Content Include="images\Capture.PNG" />
+    <Content Include="images\Capture10.PNG" />
+    <Content Include="images\Capture11.PNG" />
+    <Content Include="images\Capture12.PNG" />
+    <Content Include="images\Capture13.PNG" />
+    <Content Include="images\Capture2.PNG" />
+    <Content Include="images\Capture3.PNG" />
+    <Content Include="images\Capture4.PNG" />
+    <Content Include="images\Capture5.PNG" />
+    <Content Include="images\Capture6.PNG" />
+    <Content Include="images\Capture7.PNG" />
+    <Content Include="images\Capture8.PNG" />
+    <Content Include="images\Capture9.PNG" />
+    <Content Include="images\flag.jpg" />
+    <Content Include="images\pranav.jpg" />
+    <Content Include="images\rajat.jpg" />
+    <Content Include="images\sattu.jpg" />
+    <Content Include="Online-Voting-System\Bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="Online-Voting-System\Bin\RazorEngine.dll" />
+    <Content Include="Online-Voting-System\Bin\RazorEngine.xml" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Helpers.dll" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Helpers.xml" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Razor.dll" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Razor.xml" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.dll" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.xml" />
+    <Content Include="Online-Voting-System\Content\bootstrap.css" />
+    <Content Include="Online-Voting-System\Content\bootstrap.min.css" />
+    <Content Include="Online-Voting-System\Content\material-cards.css" />
+    <Content Include="Online-Voting-System\Content\Voting_system_sql.sql" />
+    <Content Include="Online-Voting-System\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Online-Voting-System\images\abhinav.jpg" />
+    <Content Include="Online-Voting-System\images\Capture.PNG" />
+    <Content Include="Online-Voting-System\images\Capture10.PNG" />
+    <Content Include="Online-Voting-System\images\Capture11.PNG" />
+    <Content Include="Online-Voting-System\images\Capture12.PNG" />
+    <Content Include="Online-Voting-System\images\Capture13.PNG" />
+    <Content Include="Online-Voting-System\images\Capture2.PNG" />
+    <Content Include="Online-Voting-System\images\Capture3.PNG" />
+    <Content Include="Online-Voting-System\images\Capture4.PNG" />
+    <Content Include="Online-Voting-System\images\Capture5.PNG" />
+    <Content Include="Online-Voting-System\images\Capture6.PNG" />
+    <Content Include="Online-Voting-System\images\Capture7.PNG" />
+    <Content Include="Online-Voting-System\images\Capture8.PNG" />
+    <Content Include="Online-Voting-System\images\Capture9.PNG" />
+    <Content Include="Online-Voting-System\images\flag.jpg" />
+    <Content Include="Online-Voting-System\images\pranav.jpg" />
+    <Content Include="Online-Voting-System\images\rajat.jpg" />
+    <Content Include="Online-Voting-System\images\sattu.jpg" />
+    <Content Include="Online-Voting-System\Scripts\bootstrap.js" />
+    <Content Include="Online-Voting-System\Scripts\bootstrap.min.js" />
+    <Content Include="Online-Voting-System\Scripts\init.js" />
+    <Content Include="Online-Voting-System\Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Register.aspx" />
+    <Content Include="result.aspx" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\init.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="viewcandidate.aspx" />
+    <Content Include="voting.aspx" />
+    <Content Include="Voting.mdf" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addCandidates.aspx.cs">
+      <DependentUpon>addCandidates.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="addElections.aspx.cs">
+      <DependentUpon>addElections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.cs">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="editElections.aspx.cs">
+      <DependentUpon>editElections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Elections.aspx.cs">
+      <DependentUpon>Elections.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="result.aspx.cs">
+      <DependentUpon>result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="viewcandidate.aspx.cs">
+      <DependentUpon>viewcandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="voting.aspx.cs">
+      <DependentUpon>voting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll.refresh" />
+    <Content Include="bin\RazorEngine.dll.refresh" />
+    <Content Include="bin\System.Web.Helpers.dll.refresh" />
+    <Content Include="bin\System.Web.Razor.dll.refresh" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll.refresh" />
+    <Content Include="bin\System.Web.WebPages.dll.refresh" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll.refresh" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Online-Voting-System\.git\config" />
+    <Content Include="Online-Voting-System\.git\description" />
+    <Content Include="Online-Voting-System\.git\HEAD" />
+    <Content Include="Online-Voting-System\.git\hooks\applypatch-msg.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\commit-msg.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\fsmonitor-watchman.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\post-update.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-applypatch.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-commit.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-merge-commit.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-push.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-rebase.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\pre-receive.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\prepare-commit-msg.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\push-to-checkout.sample" />
+    <Content Include="Online-Voting-System\.git\hooks\update.sample" />
+    <Content Include="Online-Voting-System\.git\index" />
+    <Content Include="Online-Voting-System\.git\info\exclude" />
+    <Content Include="Online-Voting-System\.git\logs\HEAD" />
+    <Content Include="Online-Voting-System\.git\logs\refs\heads\master" />
+    <Content Include="Online-Voting-System\.git\logs\refs\remotes\origin\HEAD" />
+    <Content Include="Online-Voting-System\.git\objects\pack\pack-2655ef104a9cc599c8b8352303a6c3ca791b5151.idx" />
+    <Content Include="Online-Voting-System\.git\objects\pack\pack-2655ef104a9cc599c8b8352303a6c3ca791b5151.pack" />
+    <Content Include="Online-Voting-System\.git\packed-refs" />
+    <Content Include="Online-Voting-System\.git\refs\heads\master" />
+    <Content Include="Online-Voting-System\.git\refs\remotes\origin\HEAD" />
+    <Content Include="Online-Voting-System\.vs\Online-Voting-System\FileContentIndex\0ab7b80b-5403-4301-a9cb-c31723856231.vsidx" />
+    <Content Include="Online-Voting-System\.vs\Online-Voting-System\FileContentIndex\read.lock" />
+    <Content Include="Online-Voting-System\.vs\Online-Voting-System\v17\.suo" />
+    <Content Include="Online-Voting-System\.vs\ProjectSettings.json" />
+    <Content Include="Online-Voting-System\.vs\slnx.sqlite" />
+    <Content Include="Online-Voting-System\.vs\VSWorkspaceState.json" />
+    <Content Include="Online-Voting-System\Bin\Microsoft.Web.Infrastructure.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\RazorEngine.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Helpers.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\System.Web.Razor.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Deployment.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.dll.refresh" />
+    <Content Include="Online-Voting-System\Bin\System.Web.WebPages.Razor.dll.refresh" />
+    <Content Include="Online-Voting-System\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Online-Voting-System\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Online-Voting-System\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Online-Voting-System\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="packages.config" />
+    <Content Include="README.md" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Online-Voting-System\.git\objects\info\" />
+    <Folder Include="Online-Voting-System\.git\refs\tags\" />
+    <Folder Include="Online-Voting-System\.vs\Online-Voting-System\FileContentIndex\merges\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50857</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44309/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
